@@ -1,0 +1,501 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts';
+@import 'variables';
+@import 'html';
+@import 'home';
+@import 'aboutUs';
+
+/*========================Slick Carousel==============================*/
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.fontLight {
+  font-family: 'helvetica_now_displaylight';
+}
+
+.lineHeight5{
+  line-height: 30px;
+}
+
+.fontRegular {
+  font-family: 'helveticanowdisplay_regularRg';
+}
+
+
+.fontMedium {
+  font-family: 'helvetica_now_displaymedium';
+}
+
+.fontBold {
+  font-family: 'helvetica_now_displaybold';
+}
+
+.fontBlack {
+  font-family: 'helvetica_now_displayblack';
+}
+.fontSemiBlack {
+  font-family: 'helvetica_now_displaymedium';
+}
+
+.textStroke {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+}
+
+.liheText {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+//Out Team
+.scTeamCard {
+  position: relative;
+  height: 500px;
+  @include Media(575) {
+    height: 250px;
+  }
+  .overlatText {
+    padding: 1rem;
+    @include Media(575) {
+      padding: 0.75rem;
+    }
+    background: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+}
+
+.dotRelative {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -7.4px;
+    left: 45%;
+    width: 13px;
+    height: 13px;
+    @include BorRadius(50%);
+    background: white;
+    @include Media(575) {
+      width: 10px;
+      height: 10px;
+      bottom: -5px;
+    }
+  }
+}
+
+//Slick Arrow
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+.slick-prev {
+  left: -2.5rem;
+  width: 40px;
+  height: 40px;
+  @include Media(575) {
+    top: auto;
+    left: auto;
+    bottom: -50px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+  }
+}
+.slick-next {
+  left: auto;
+  right: -2.5rem;
+  width: 40px;
+  height: 40px;
+  @include Media(575) {
+    top: auto;
+    left: auto;
+    bottom: -50px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.scSuccess .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.scWorkCard img {
+  height: 350px;
+}
+
+.slick-center {
+  .px-8 {
+    padding: 0;
+  }
+  .overlatText {
+    display: flex;
+  }
+  .scWorkCard img {
+    height: 450px;
+  }
+}
+
+.EnterYourEmail{
+  @include Media(575) {
+    width: 100%;
+  }
+}
+
+//QNA Animation
+
+.transition-max-height {
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.max-h-screen {
+  max-height: 100vh; /* Adjust based on your content */
+}
+
+/* Apply CSS for modal container */
+/* Disable scrolling and interactions with elements behind modal */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  // width: 100%;
+}
+
+.fixed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.fixed > div {
+  overflow: auto;
+}
+
+.image-style {
+  height: 90vh;
+  width: 100vh;
+  object-fit: contain;
+}
+
+// @media (max-width: 425px) {
+//   .image-style {
+//     height: auto;
+//     width: 100%;
+//   }
+
+//   .fixed .relative {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   .fixed .relative button {
+//     position: static;
+//     margin-top: 10px;
+//   }
+
+//   .fixed .relative .absolute {
+//     position: relative;
+//   }
+
+//   .fixed .relative .absolute.left-5 {
+//     order: 1;
+//   }
+
+//   .fixed .relative .absolute.right-5 {
+//     order: 3;
+//   }
+
+//   .fixed .relative .absolute.top-2 {
+//     order: 2;
+//   }
+// }
+
+
+// /* Style for the modal container */
+// .fixed {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   z-index: 1000;
+// }
+
+// /* Style for the modal content */
+// .fixed > div {
+//   // position: relative;
+//   // max-width: 100%;
+//   // max-height: 100vh;
+//   overflow: auto;
+//   // padding: 20px;
+//   // background-color:hsl(0, 100%, 0%, 15%);  
+// }
+
+// /* Adjustments for the close button */
+// // .fixed button {
+// //   position: relative;
+// //   top: -300px;
+// //   right: 40px;
+// //   cursor: pointer;
+// //   background: none;
+// //   border: none;
+// //   color: #a4a0a0;
+// //   font-size: 30px;
+// // }
+
+// // @media (max-width: 767px) {
+// //   /* Hide modal on smaller screens */
+// //   .fixed {
+// //     display: none;
+// //   }
+// // }
+
+/* Default image height */
+.responsive-image {
+  height: 24rem; /* 96 units (h-96) in Tailwind CSS translates to 24rem */
+}
+
+/* Adjust image height for screen sizes 375px or less */
+@media (max-width: 375px) {
+  .responsive-image {
+    height: 18rem;
+  }
+}
+
+//testinomial sider
+.keen-slider__slide {
+  transition: transform 0.8s ease-in;
+}
+//Our Sevices
+.scAboutPage {
+  position: relative;
+  .lineSvg {
+    bottom: -10px;
+    width: 200px;
+    height: auto;
+    left: 0;
+    @include Media(575) {
+      width: 150px;
+    }
+  }
+  .lineAndCircle {
+    bottom: -10px;
+    width: 180px;
+    height: auto;
+    left: 42%;
+    @include Media(575) {
+      width: 150px;
+      left: 40%;
+    }
+  }
+}
+
+//Case Studies
+.scCasePage {
+  position: relative;
+  .circleLine {
+
+    left: -1%;
+    width: 40%;
+    height: auto;
+    top: 5px;
+    z-index: -1;
+    @include Media(575) {
+      width: 162px;
+        top: 0%;
+    }
+  }
+  .lineSvg {
+    left: 35%;
+    width: 190px;
+    height: auto;
+    bottom: -10px;
+    z-index: -1;
+    @include Media(575) {
+      left: 30%;
+      width: 150px;
+    }
+  }
+}
+
+//WHo we are
+.scWhoWePage {
+  position: relative;
+  .circleLine {
+    left: 31.5%;
+    width: 320px;
+    height: auto;
+    top: -12px;
+    z-index: -1;
+    @include Media(575) {
+      left: 37%;
+      width: 195px;
+      top: -8%;
+    }
+    @include Media(320) {
+      left: -6%;
+        width: 195px;
+        top: 45%;
+    }
+  }
+  .lineSvg {
+    left: 20%;
+    width: 220px;
+    height: auto;
+    bottom: -3px;
+    z-index: -1;
+    @include Media(575) {
+      left: 0%;
+      width: 120px;
+    }
+  }
+}
+
+// Form
+.formPage {
+  position: relative;
+  .circleLine {
+    left: -0.1rem;
+    max-width: 200% !important;
+    width: 335px;
+    height: auto;
+    top: -18px;
+    z-index: -1;
+    @include Media(575) {
+      left: -4%;
+      width: 195px;
+      top: -32%;
+    }
+    // @include Media(768) {
+    //   left: -4%;
+    //   width: 241px;
+    //   top: -32%;
+    // }
+  }
+  .lineSvg {
+    left: 19%;
+    width: 170px;
+    height: auto;
+    bottom: -15px;
+    z-index: -1;
+    @include Media(575) {
+      left: 0%;
+      width: 120px;
+    }
+  }
+}
+
+//Our MethadologyPage
+.scOurMethadologyPage {
+  position: relative;
+  .aboveLine {
+    left: -4%;
+    width: 380px;
+    height: auto;
+    bottom: 4px;
+    z-index: -1;
+    @include Media(575) {
+      width: 150px;
+      bottom: 45px;
+    }
+  }
+  .circleLine {
+    left: 41%;
+    width: 320px;
+    height: auto;
+    top: -15px;
+    z-index: -1;
+    @include Media(575) {
+      left: 0%;
+      width: 120px;
+      top: 40px;
+    }
+  }
+}
+
+//Case Studies TWCC
+.scTWCCPage {
+  position: relative;
+  .aboveLine {
+    left: -35px;
+    width: 380px;
+    height: auto;
+    bottom: 1px;
+    z-index: -1;
+    @include Media(575) {
+      width: 150px;
+    }
+  }
+  .circleLine {
+    left: 58.5%;
+    width: 330px;
+    height: auto;
+    top: -14px;
+    z-index: -1;
+    @include Media(575) {
+      left: 0%;
+      width: 120px;
+      top: 40px;
+    }
+  }
+}
+
+.scManteiroPage {
+  position: relative;
+  .circleSvg {
+    left: -2.3%;
+    width: 285px;
+    height: auto;
+    top: -7px;
+    position: absolute;
+    z-index: -1;
+    @include Media(575) {
+      width: 150px;
+    }
+  }
+  .lineAndCircleSvg {
+    left: 39%;
+    width: 320px;
+    height: auto;
+    bottom: -13px;
+    z-index: -1;
+    @include Media(575) {
+      width: 120px;
+    }
+  }
+}
+
+//Our Team
+.scOurteamPage {
+  position: relative;
+  .singleLine {
+    bottom: -10px;
+    width: 250px;
+    height: auto;
+    left: 2%;
+    @include Media(575) {
+      width: 150px;
+    }
+  }
+}

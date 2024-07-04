@@ -1,0 +1,25 @@
+//Home About
+.headCard {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: '01';
+    position: absolute;
+    top: -0.75rem;
+    left: 0;
+    width: fit-content;
+    color: #400056;
+    font-family: 'helvetica_now_displayblack';
+    font-size: 3rem;
+    z-index: -1;
+  }
+  &.second::before {
+    content: '02';
+  }
+  &.third::before {
+    content: '03';
+  }
+  &.fourth::before {
+    content: '04';
+  }
+}

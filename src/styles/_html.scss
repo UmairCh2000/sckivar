@@ -1,0 +1,121 @@
+/* =============================
+        HTML & BODY
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'helveticanowdisplay_regularRg';
+  font-weight: 400;
+  font-size: 16px;
+  color: nth($color, 2);
+}
+
+.DBlock,
+header,
+section,
+footer {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.DFlex {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.FocusNone,
+a:focus,
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none !important;
+}
+
+.TransAni {
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.lineHeightH1 {
+  line-height: 4rem !important;
+  @include Media(1199) {
+    line-height: inherit !important;
+  }
+}
+
+.lineHeightH2 {
+  line-height: 2.5rem !important;
+  @include Media(1199) {
+    line-height: inherit !important;
+  }
+}
+
+.lineHeight50 {
+  line-height: 50px !important;
+  @include Media(1199) {
+    line-height: inherit !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+select {
+  -o-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
