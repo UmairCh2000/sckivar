@@ -44,7 +44,7 @@ const Form = () => {
     }
 
     setErrorMessage("");
-    window.location.href = "https://calendly.com/sckivarllc/";
+    window.location.href = "https://calendly.com/sckivarllc/discoverycall";
 
     try {
       const res = await fetch("api/sendemail", {
